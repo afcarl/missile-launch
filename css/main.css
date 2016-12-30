@@ -1,0 +1,16 @@
+#margin{
+  margin: 20px;
+}
+.row{
+  margin-top: 10px;
+  width: 1300;
+}
+.setup{
+  padding: 10px;
+  padding-top: 5px;
+  margin-left: 15px;
+
+}
+.header{
+  font-size: 150%;
+}
