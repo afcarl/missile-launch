@@ -1,5 +1,5 @@
-WINDOW_WIDTH = 1280;
-WINDOW_HEIGHT = 720;
+
+WINDOW_HEIGHT = 680;
 CELL_SIZE = 40;
 SCALE = 4;
 
@@ -32,8 +32,8 @@ function mouseWheel(event){
 
 function draw() {
 
-  stroke(224, 224, 224);
-  fill(255);
+  stroke('#2E426E');
+  fill('#2B3C63');
   for(var x = 0; x < WINDOW_WIDTH/CELL_SIZE; x++){
     for(var y = 0; y < WINDOW_HEIGHT/CELL_SIZE; y++){
       rect(x*40,y*40, CELL_SIZE, CELL_SIZE);
@@ -41,13 +41,13 @@ function draw() {
   }
 
   stroke(0,0,0,0);
-  fill(224, 224, 224);
+  fill('#334E87');
   for(var i = 0; i < WINDOW_HEIGHT/CELL_SIZE; i++){
     var meters = (WINDOW_HEIGHT/CELL_SIZE - i) * CELL_SIZE * SCALE;
     text(unitConversion(meters), 5, i * CELL_SIZE + 15);
   }
 
-  for(var i = 0; i < WINDOW_WIDTH/CELL_SIZE; i++){
+  for(var i = 1; i < WINDOW_WIDTH/CELL_SIZE; i++){
     var meters = i * CELL_SIZE * SCALE;
     text(unitConversion(meters), i * CELL_SIZE + 5, 715);
   }
@@ -77,6 +77,7 @@ function fillValues(){
 }
 
 $(document).ready(function(){
+  WINDOW_WIDTH = $('#simulation').width();
   $('#launch').click(function(){
     var angle = parseInt($('.launchangle').val());
     var fuel = parseInt($('.fuel').val());

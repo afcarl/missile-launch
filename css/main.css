@@ -1,16 +1,46 @@
-#margin{
-  margin: 20px;
+.navbar{
+  background-color: #273554;
+  border-color: #2E426E;
+  border-bottom: 2px solid #2E426E;
+}
+body{
+  padding-top: 70px;
+  background-color: #2B3C63;
+}
+.navbar-inverse .navbar-brand{
+  color: white;
+}
+.brand-img{
+  padding: 8px;
 }
 .row{
-  margin-top: 10px;
-  width: 1300;
+  margin-bottom: 10px;
 }
-.setup{
-  padding: 10px;
-  padding-top: 5px;
-  margin-left: 15px;
+.panel-body{
+  background-color: #2B3C63;
+}
 
+.panel{
+    border: 2px solid  #2E426E;
 }
-.header{
-  font-size: 150%;
+.input-group-addon{
+  background-color: #273554;
+  border-color: #2E426E;
+  color: #334E87;
+}
+.form-control{
+  background-color: #2B3C63;
+  border-color: #2E426E;
+  color: white;
+}
+.custom{
+  background-color: #273554;
+  color: white;
+  border-bottom: 2px solid  #2E426E;
+  padding: 5px;
+}
+.cont{
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
 }

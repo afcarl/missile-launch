@@ -12,12 +12,9 @@ function Missile(id, angle, fuel, mass, fueluse, width, length, thrustangle){
   this.width = width;
   this.length = length;
 
-  // Aha, thrust vectoring
-  // https://en.wikipedia.org/wiki/Thrust_vectoring
-  // https://en.wikipedia.org/wiki/Thrust_vectoring#/media/File:En_Gimbaled_thrust_diagram.svg
   this.thrust_angle = thrustangle; // relative to this.angle
   this.angle = angle;
-  
+
   this.vx = 0;
   this.vy = 0;
 
@@ -77,10 +74,11 @@ function Missile(id, angle, fuel, mass, fueluse, width, length, thrustangle){
     translate(this.xsc, -this.ysc);
     rotate(radians(90 - this.angle));
 
-    fill(0);
+    fill(255);
     rectMode(CENTER);
     rect(this.width/2 / SCALE, this.length/2 / SCALE, this.width / SCALE, this.length / SCALE, 5 / SCALE, 5 / SCALE, 0, 0);
     rectMode(CORNER);
+
     rotate(-radians(90 - this.angle));
     translate(-this.xsc, this.ysc);
 
@@ -89,7 +87,7 @@ function Missile(id, angle, fuel, mass, fueluse, width, length, thrustangle){
 
   this.updateInfo = function(){
     if($('#showinfo').hasClass('btn-success')){
-      fill(0, 102, 153);
+      fill(255);
       text("Missile " + this.id, this.xsc + 20, -this.ysc - 10);
       fill(0);
       text("x: " + Math.round(this.x) + ' y: ' + Math.round(this.y), this.xsc + 20, -this.ysc + 5);
