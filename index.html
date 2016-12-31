@@ -17,10 +17,10 @@
     <link rel="stylesheet" href="css/main.css">
 
     <!-- Simulation js -->
-    <script language="javascript" type="text/javascript" src="main.js"></script>
-    <script language="javascript" type="text/javascript" src="missile.js"></script>
-    <script language="javascript" type="text/javascript" src="athmosphere.js"></script>
-    <script language="javascript" type="text/javascript" src="physics.js"></script>
+    <script language="javascript" type="text/javascript" src="js/main.js"></script>
+    <script language="javascript" type="text/javascript" src="js/missile.js"></script>
+    <script language="javascript" type="text/javascript" src="js/athmosphere.js"></script>
+    <script language="javascript" type="text/javascript" src="js/physics.js"></script>
 
   </head>
   <body>
@@ -45,65 +45,88 @@
         <div class="col-md-8">
         <div class="panel panel-default">
           <div class="custom panel-body">
-            <span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span> Create a rocket
+            <span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span> Create a missile
           </div>
           <div class="panel-body">
           <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-3">
               <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">Launch ∠</span>
                 <input type="text" class="form-control launchangle">
               </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
               <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">Fuel</span>
                 <input type="text" class="form-control fuel">
               </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
               <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">Mass</span>
                 <input type="text" class="form-control mass">
               </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
               <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">Fueluse</span>
                 <input type="text" class="form-control fueluse">
               </div>
             </div>
+          </div>
+          <div class="row">
             <div class="col-md-2">
               <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">Width</span>
                 <input type="text" class="form-control width">
               </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
               <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">Height</span>
                 <input type="text" class="form-control length">
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-3">
               <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">Thrust ∠</span>
                 <input type="text" class="form-control thrustangle">
               </div>
+
             </div>
-            <div class="col-md-8">
+            <div class="col-md-2">
+              <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">ID </span>
+                <input type="text" class="form-control name">
+              </div>
+            </div>
+            <div class="col-md-1">
               <button id="launch" class="btn btn-success">Launch</button>
-              <button id="showinfo" class="btn btn-success">Show info</button>
-              <button id="running" class="btn btn-success">Running</button>
             </div>
           </div>
           </div>
         </div>
       </div>
       <div class="col-md-4">
-
+        <div class="panel panel-default">
+          <div class="custom panel-body">
+            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Settings
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-12">
+                <button id="showinfo" class="btn btn-success">Show info</button>
+                <button id="running" class="btn btn-success">Running</button>
+                <button id="xaxis" class="btn btn-success">X-axis</button>
+                <button id="yaxis" class="btn btn-success">Y-axis</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <button id="removemis" class="btn btn-primary">Remove missiles</button>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
     </div>

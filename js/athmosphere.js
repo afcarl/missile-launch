@@ -108,6 +108,9 @@ function getGeoPotential(y){
 }
 
 function drawAthmosphere(){
+  // Surface
+  stroke(255);
+  line(0, 0, WINDOW_WIDTH, 0);
   // Troposphere
   stroke(255, 165, 0);
   line(0, -10000 / SCALE, WINDOW_WIDTH, -10000 / SCALE);
@@ -122,7 +125,10 @@ function drawAthmosphere(){
   stroke(0, 0, 153);
   line(0, -600000 / SCALE, WINDOW_WIDTH, -600000 / SCALE);
 
+
   stroke(0, 0, 0, 0);
+  fill(255);
+  text('Surface', 0, 15);
   fill(255, 165, 0);
   text('Troposphere', 0, -10000 / SCALE + 15);
   fill(51,204, 255);

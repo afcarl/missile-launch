@@ -5,7 +5,7 @@ function Missile(id, angle, fuel, mass, fueluse, width, length, thrustangle){
   this.id = id;
   this.x = 0;
   this.y = 0;
-  this.area = 4;
+  this.area = PI * (width/2)**2;
 
   this.time = 0;
 

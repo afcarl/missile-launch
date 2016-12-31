@@ -23,10 +23,12 @@ function setup(){
 
 // Function to zoom in and out of the simulation
 function mouseWheel(event){
-  if(event.delta > 0){
-    SCALE *= 2;
-  } else {
-    SCALE /= 2;
+  if(mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height){
+    if(event.delta > 0){
+      SCALE *= 2;
+    } else {
+      SCALE /= 2;
+    }
   }
 }
 
@@ -42,17 +44,20 @@ function draw() {
 
   stroke(0,0,0,0);
   fill('#334E87');
-  for(var i = 0; i < WINDOW_HEIGHT/CELL_SIZE; i++){
-    var meters = (WINDOW_HEIGHT/CELL_SIZE - i) * CELL_SIZE * SCALE;
-    text(unitConversion(meters), 5, i * CELL_SIZE + 15);
+
+  if($('#yaxis').hasClass('btn-success')){
+    for(var i = 0; i < WINDOW_HEIGHT/CELL_SIZE; i++){
+      var meters = (WINDOW_HEIGHT/CELL_SIZE - i) * CELL_SIZE * SCALE;
+      text(unitConversion(meters), 5, i * CELL_SIZE + 15);
+    }
   }
 
-  for(var i = 1; i < WINDOW_WIDTH/CELL_SIZE; i++){
-    var meters = i * CELL_SIZE * SCALE;
-    text(unitConversion(meters), i * CELL_SIZE + 5, 715);
+  if($('#xaxis').hasClass('btn-success')){
+    for(var i = 1; i < WINDOW_WIDTH/CELL_SIZE; i++){
+      var meters = i * CELL_SIZE * SCALE;
+      text(unitConversion(meters), i * CELL_SIZE + 5, WINDOW_HEIGHT - 5);
+    }
   }
-
-
 
   translate(0, WINDOW_HEIGHT);
   drawAthmosphere();
@@ -74,6 +79,7 @@ function fillValues(){
   $('.width').val(5);
   $('.length').val(90);
   $('.thrustangle').val(0);
+  $('.name').val(0);
 }
 
 $(document).ready(function(){
@@ -86,7 +92,8 @@ $(document).ready(function(){
     var width = parseInt($('.width').val());
     var length = parseInt($('.length').val());
     var thrustangle = parseInt($('.thrustangle').val());
-    missiles.push(new Missile(idcounter, angle, fuel, mass, fueluse, width, length, thrustangle));
+    var name = $('.name').val();
+    missiles.push(new Missile(name, angle, fuel, mass, fueluse, width, length, thrustangle));
     idcounter++;
   });
   $('#showinfo').click(function(){
@@ -94,5 +101,14 @@ $(document).ready(function(){
   })
   $('#running').click(function(){
     $('#running').toggleClass('btn-success btn-danger');
+  })
+  $('#xaxis').click(function(){
+    $('#xaxis').toggleClass('btn-success btn-danger');
+  })
+  $('#yaxis').click(function(){
+    $('#yaxis').toggleClass('btn-success btn-danger');
+  })
+  $('#removemis').click(function(){
+    missiles = [];
   })
 });
