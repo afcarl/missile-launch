@@ -5,7 +5,11 @@
 }
 body{
   padding-top: 70px;
-  background-color: #2B3C63;
+  background-image: url('../assets/background.jpg');
+  background-size: cover;
+}
+.html{
+
 }
 .navbar-inverse .navbar-brand{
   color: white;
@@ -43,4 +47,27 @@ body{
   width: 100%;
   padding-left: 18%;
   padding-right: 18%;
+}
+.milist{
+  background-color: #2B3C63;
+  border-color: #2E426E;
+}
+.list-group{
+  border-color: #2E426E;
+  background-color: #2B3C63;
+}
+a.milist:hover{
+  background-color: #273554;
+  color: white;
+}
+a.milist{
+  color: white;
+}
+.info-btn{
+  padding: 0px 2px;
+  font-size: 80%;
+  width: 100%;
+}
+.liveinfo{
+  border-color:
 }

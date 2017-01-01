@@ -68,8 +68,8 @@ function Missile(id, angle, fuel, mass, fueluse, width, length, thrustangle){
   }
 
   this.show = function(){
-    this.xsc = (this.x ) / SCALE;
-    this.ysc = this.y / SCALE;
+    this.xsc = this.x / SCALE - start_x;
+    this.ysc = this.y / SCALE - start_y;
 
     translate(this.xsc, -this.ysc);
     rotate(radians(90 - this.angle));

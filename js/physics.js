@@ -19,14 +19,23 @@ function angleToPoint(x1, y1, x2, y2){
 }
 
 function unitConversion(meters){
+  var negative = '';
+
+  if(meters < 0){
+    meters *= -1;
+    negative = '-';
+  }
+
   var base = Math.log10(meters);
   if(base < 3){
-    return Math.round(meters) + 'm';
+    return negative + Math.round(meters) + 'm';
   } else if(base < 6){
-    return Math.round(meters / 10**3) + 'km';
+    return negative + Math.round(meters / 10**3) + 'km';
   } else {
-    return Math.round(meters / 10**Math.floor(base)*100)/100 + ' * 10^' + (Math.floor(base)-3) + 'km';
+    return negative + Math.round(meters / 10**Math.floor(base)*100)/100 + ' * 10^' + (Math.floor(base)-3) + 'km';
   }
+
+
 }
 
 function speed(vx, vy){

@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>Missile simulation</title>
-    <link rel="icon" href="assets/icon.ico">
+    <link rel="icon" href="assets/rocket.png">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css" >
@@ -34,12 +34,21 @@
       </div>
     </nav>
     <!-- /.navbar -->
-    <div class="cont container">
+    <div class="cont container opac">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-10">
           <div id="simulation">
           </div>
-      </div>
+        </div>
+        <div class="col-md-2">
+          <div class="panel panel-default">
+            <div class="custom panel-body">
+              <center><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Missiles</center>
+            </div>
+            <div class="missilelist list-group">
+            </div>
+          </div>
+        </div>
       </div>
       <div class="row">
         <div class="col-md-8">

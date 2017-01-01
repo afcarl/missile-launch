@@ -110,31 +110,31 @@ function getGeoPotential(y){
 function drawAthmosphere(){
   // Surface
   stroke(255);
-  line(0, 0, WINDOW_WIDTH, 0);
+  line(0, start_y, WINDOW_WIDTH, start_y);
   // Troposphere
   stroke(255, 165, 0);
-  line(0, -10000 / SCALE, WINDOW_WIDTH, -10000 / SCALE);
+  line(0, -10000 / SCALE + start_y, WINDOW_WIDTH, -10000 / SCALE + start_y);
   // Stratosphere
   stroke(51, 204, 255);
-  line(0, -50000 / SCALE, WINDOW_WIDTH, -50000 / SCALE);
+  line(0, -50000 / SCALE + start_y, WINDOW_WIDTH, -50000 / SCALE + start_y);
   // Mesosphere
   stroke(0, 102, 255);
-  line(0, -85000 / SCALE, WINDOW_WIDTH, -85000 / SCALE);
+  line(0, -85000 / SCALE + start_y, WINDOW_WIDTH, -85000 / SCALE + start_y);
   // Thermosphere
   // Exposphere
   stroke(0, 0, 153);
-  line(0, -600000 / SCALE, WINDOW_WIDTH, -600000 / SCALE);
+  line(0, -600000 / SCALE + start_y, WINDOW_WIDTH, -600000 / SCALE + start_y);
 
 
   stroke(0, 0, 0, 0);
   fill(255);
-  text('Surface', 0, 15);
+  text('Surface', 0, start_y + 15);
   fill(255, 165, 0);
-  text('Troposphere', 0, -10000 / SCALE + 15);
+  text('Troposphere', 0, -10000 / SCALE + start_y + 15);
   fill(51,204, 255);
-  text('Stratosphere', 0, -50000 / SCALE + 15);
+  text('Stratosphere', 0, -50000 / SCALE + start_y + 15);
   fill(0, 102, 255);
-  text('Mesosphere', 0, -85000 / SCALE + 15);
+  text('Mesosphere', 0, -85000 / SCALE  + start_y + 15);
   fill(0, 0, 153);
-  text('Thermosphere', 0, -600000 / SCALE + 15);
+  text('Thermosphere', 0, -600000 / SCALE + start_y + 15);
 }
